@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Scores4u</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+    <link type="text/css" href="css/start/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
+       <link type="text/css" href="css/buttons.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+    <div id="dz-root"></div>
+    <script type="text/javascript" src="js/dz.js"></script>
+    <script type="text/javascript"  src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
+    <script type="text/javascript" src="js/searcher.js"></script>
+    
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+         <h1><a href="index.html">Scores<span class="logo_colour">4u</span></a></h1>
+          <h2>Find your score or...create it!</h2>
+        </div>
+      </div>
+        <nav>
+            <ul class="sf-menu" id="nav">
+                <li ><a href="index.html">Home</a></li>
+                
+                <li class="selected"><a href="spotify.html">Search</a></li>
+                 <li><a href="editor.html">Editor</a></li>
+                
+                <li><a href="#">Info</a>
+                    <ul>
+                        <li><a href="manual.html">UserManual </a></li>
+                        <li><a href="technical.html">Technical Details</a></li></ul></li>
+                
+                <li><a href="contact.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="site_content">
+      
+      
+      <div class="content">
+            <h1>Search your music, I'll show you the score and lyrics</h1>
+          <p>With our Meta-Search Engine, you can look up a song in different platforms at the same time and choose the player that you prefer :). Only one lyrics and score engine are supported by now, sorry!
+          It's really simple and straight-forward to use: just query an input text (song title, artist, tag...) and the Streamer Boxes will be full of cool options to listen to. Whether you pick the song form one engine or the other, the main Player window will appear, with a minimal playback control widget, a panel with the retrieved lyrics and the Score of the track.
+          If no score has been found, you'll be prompted to create your own! Please don't use the link that appears there (we know, it's kind of cruel to whou you this nice button...), just click on the tab on the top.</p>
+          <div id="firstSlide">
+          <form action="#" method="post">
+              <div class="form_settings">
+                  <p><span>Search: </span><input type="text" name="search" value="" id="searchField"/><button value="Search" class="submit"  name="name" onclick="return searchSong();" >Search </button></p>
+              </div>
+          </form>
+              <h3> Spotify </h3>
+              <div id="spotifyResults" class="gallery">
+                  </div>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <h3> Deezer </h3>
+              <div id="deezerResults" class="gallery">
+              </div>
+              
+          
+              </div>
+          <div id="secondSlide" style="display:none">
+            <div style="height:550px"> 
+              <div id="spotifyPlayer" style="width:500px; float:left;" >
+                  <iframe src="https://embed.spotify.com/?uri=spotify:track:1DfGPEHxTYeaJpiNA4xUb5" width="400" height="500" frameborder="0" allowtransparency="true" id="spotifyIframe" ></iframe> 
+                  
+              </div>
+                      <div id="deezerPlayer" style="width:500px; float:left; display:none" >
+                 
+                 <div id="deezerIframe"></div>
+                 </div>
+                <div style="width:400px;height:480px;float:right;">
+                    <h3><a href=#>Lyrics </a></h3>
+              <div id="lyricsM" style="margin:10px;width:400px;height:425px;overflow:auto;;background-color:#FFFFFF; text-color=#000000" >
+                  
+                  </div>
+                    </div>
+                </div>
+      
+              </br>
+              </br>
+                <div>
+              <div id="score2">
+                  <div style="text-align:center">
+                      <input type="button" value="Prev" onclick="prev()" />
+                      <span id="count"></span>
+                      <input type="button" value="Next" onclick="next()" />
+                      
+                  </div>
+                  </br>
+                 
+                  <div style="background-color:#FFFFFF" id="scorePng">
+                      
+                  </div>
+              </div>
+                    </div>
+                    </div>
+              
+         
+        
+          
+              </div>
+          
+      </div>
+    </div>
+    <footer>
+   <p>Scores4u! BCN #musichackday | design from <a href="css3templates.co.uk">css3templates.co.uk </a></p>
+    </footer>
+  </div>
+  <p>&nbsp;</p>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
+       <script type="text/javascript" src="js/jquery.oembed.js"></script>
+    <div id="dz-root"></div>
+    <script src="http://cdn-files.deezer.com/js/min/dz.js"></script>
+    <script type="text/javascript"  src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
+    
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#images').kwicks({
+        max : 600,
+        spacing : 2
+      });
+      $('ul.sf-menu').sooperfish();
+                      
+                      DZ.init({
+                              appId  : '103141',
+                              channelUrl : 'http:/localhost/channel.html'
+                              });
+                   
+    });
+  </script>
+  
+</body>
+</html>

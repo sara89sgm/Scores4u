@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Scores4u</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+    
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+         <h1><a href="index.html">Scores<span class="logo_colour">4u</span></a></h1>
+          <h2>Find your score or...create it!</h2>
+        </div>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li ><a href="index.html">Home</a></li>
+          
+            <li><a href="spotify.html">Search</a></li>
+          <li><a href="editor.html">Editor</a></li>
+          
+          <li ><a href="#">Info</a>
+          <ul>
+          <li><a href="manual.html">UserManual </a></li>
+          <li ><a href="technical.html">Technical Details</a></li></ul></li>
+          <li><a href="contact.html">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="site_content">
+      <ul id="images">
+        
+        <li><img src="images/musescore.png" width="600" height="300" alt="photo_two" /></li>
+        <li><img src="images/spotify.jpg" width="600" height="300" alt="photo_three" /></li>
+        <li><img src="images/deezer.jpg" width="600" height="300" alt="photo_four" /></li>
+        <li><img src="images/musixmatch.jpeg" width="600" height="300" alt="photo_five" /></li>
+          <li><img src="images/echonest.jpg" width="600" height="300" alt="photo_five" /></li>
+        
+      </ul>
+      
+      <div class="content">
+          <h1>Technical Details</h1>
+          
+          The project contains three main components:
+          
+          <ul>
+              <li><a href="#searchEng">Web Search Engine +Visualizer </a></li>
+              <li><a href="#editor"> Score Editor </a></li>
+              <li><a href="#spotifyapp">Spotify App </a> </li>
+            </ul>
+          
+          <h2 id="searchEng"> Web Search Engine +Visualizer  </h2>
+          <p> The web search engine works with differetns APIs to get the data and id f the tracks in relation with the user's search:</p>
+          <ul>
+              <li><u>Deezer API/SDK: </u> A HTTP Request is used to get the id of the tracks related with the user's search. After that, the SDK is used to play the song selected by the user. </li>
+              <li><u> Spotify API/ Play Button:</u> A HTTP Request is used to get the id of the tracks related with the user's search. After that, the Play Button Widget is used to play the song selected by the user.</u></li>
+              <li><u> Musescore API</u> The visualizaion of the scores are possible thanks to this API, we get the scores and render them via HTML5 and JS </li>
+             
+              <li><u> Musixmatch API: </u> we use musixmatch aPi to show the lyrics of the song playing on the differents players and the score showed on the web page<li>
+                   <li><u>Echonest API: </u> We have used echonest like a bridge between the Spotify/Deezer APIs and musixmatch giving us more information about the relation between the tracks and lyrics. </li>
+                </ul>
+          
+          <h2 id="editor"> Score Editor </h2>
+          
+          <p>The Score Editor is built over the Vex Flow, a HTML5 and JS library to manage music engraving </p>
+          
+          <p> We are already working in a parser to create the MusicXML file to create a new Musescore entry</p>
+          
+          <h2 id="spotifyapp"> Spotify App </h2>
+          <p> Working on the documenttion (No time for presetnation and this!!! Ahhh Stressss )</p>
+          
+      </div>
+    </div>
+    <footer>
+       <p>Scores4u! BCN #musichackday | design from <a href="css3templates.co.uk">css3templates.co.uk </a></p>
+    </footer>
+  </div>
+  <p>&nbsp;</p>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#images').kwicks({
+        max : 600,
+        spacing : 2
+      });
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
+</html>

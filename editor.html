@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scores4u</title>
+
+<!--Vexflow-->
+<script src="js/jquery-1.6.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- modernizr enables HTML5 elements and feature detects -->
+    <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+
+<!-- VexFlow Uncompiled Sources -->
+        <script src="src/header.js"></script>
+        <script src="src/vex.js"></script>
+        <script src="src/flow.js"></script>
+        <script src="src/tables.js"></script>
+        <script src="src/fonts/vexflow_font.js"></script>
+        <script src="src/glyph.js"></script>
+        <script src="src/stave.js"></script>
+        <script src="src/staveconnector.js"></script>
+        <script src="src/tabstave.js"></script>
+        <script src="src/tickcontext.js"></script>
+        <script src="src/tickable.js"></script>
+        <script src="src/note.js"></script>
+        <script src="src/barnote.js"></script>
+        <script src="src/ghostnote.js"></script>
+        <script src="src/stavenote.js"></script>
+        <script src="src/tabnote.js"></script>
+        <script src="src/beam.js"></script>
+        <script src="src/voice.js"></script>
+        <script src="src/voicegroup.js"></script>
+        <script src="src/modifier.js"></script>
+        <script src="src/modifiercontext.js"></script>
+        <script src="src/accidental.js"></script>
+        <script src="src/dot.js"></script>
+        <script src="src/formatter.js"></script>
+        <script src="src/stavetie.js"></script>
+        <script src="src/tabtie.js"></script>
+        <script src="src/tabslide.js"></script>
+        <script src="src/bend.js"></script>
+        <script src="src/vibrato.js"></script>
+        <script src="src/annotation.js"></script>
+        <script src="src/articulation.js"></script>
+        <script src="src/tuning.js"></script>
+        <script src="src/stavemodifier.js"></script>
+        <script src="src/keysignature.js"></script>
+        <script src="src/timesignature.js"></script>
+        <script src="src/clef.js"></script>
+        <script src="src/music.js"></script>
+        <script src="src/keymanager.js"></script>
+        <script src="src/renderer.js"></script>
+        <script src="src/raphaelcontext.js"></script>
+        <script src="src/stavevolta.js"></script>
+        <script src="src/staverepetition.js"></script>
+        <script src="src/stavebarline.js"></script>
+        <script src="src/stavesection.js"></script>
+        <script src="src/stavehairpin.js"></script>
+        <script src="src/stavetempo.js"></script>
+        <script src="src/tremolo.js"></script>
+
+<!--jQuery plugin to throttle slider event-->
+<!--<script src="js/jquery.ba-throttle-debounce.min.js"></script>-->
+
+<!--jQuery Mobile Framework-->
+<!--<link rel="stylesheet" href="css/jquery.mobile-1.0b2.min.css" />
+<script src="js/jquery.mobile-1.0b2.min.js"></script>-->
+
+<!--custom script-->
+<script src="js/cloud-composer.js"></script>
+
+<!--custom style-->
+<link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+
+
+
+    
+
+    
+    <body>
+        <div id="main">
+            <header>
+                <div id="logo">
+                    <div id="logo_text">
+                        <!-- class="logo_colour", allows you to change the colour of the text -->
+                        <h1><a href="index.html">Scores<span class="logo_colour">4u</span></a></h1>
+                        <h2>Find your score or...create it!</h2>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="sf-menu" id="nav">
+                        <li ><a href="index.html">Home</a></li>
+                        
+                        <li><a href="spotify.html">Search</a></li>
+                        <li class="selected"><a href="editor.html">Editor</a></li>
+                        <li><a href="#">Info</a>
+                            <ul>
+                                <li><a href="manual.html">UserManual </a></li>
+                                <li><a href="technical.html">Technical Details</a></li></ul></li>
+                        <li><a href="contact.html">Team</a></li>
+                       
+                    </ul>
+                </nav>
+            </header>
+            <div id="site_content">
+               
+                <div class="content">
+                    <h1>Create your own scores with HTML5 and JS</h1>
+                    <p>The Score Editor is still in pre-aplha phase, due to some issues with multiline rendering that haven't been solved yet... But feel free to try it out!
+                    Use the arrow keys to navigate through the score. To add new notes, go to the end and hit Enter. Pitch can only be changed one semitone at a time by now. To change the duration of a single note, hit a number while it's selected. It's the same encoding Finale does: 7 for a whole note, 6 for a half note, 5 for a quarter, and so on. </p>
+                    <div style="background-color:#FFFFFF">
+                    
+                    <canvas id="scoreCanvas" height="400" width="800"></canvas>
+                </div>
+                    </div>
+            </div>
+            <footer>
+                <p>Scores4u! BCN #musichackday | design from <a href="css3templates.co.uk">css3templates.co.uk </a></p>
+            </footer>
+        </div>
+        <p>&nbsp;</p>
+        <!-- javascript at the bottom for fast page loading -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+        <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+        <script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                              $('#images').kwicks({
+                                                  max : 600,
+                                                  spacing : 2
+                                                  });
+                              $('ul.sf-menu').sooperfish();
+                              initWriter();
+                              });
+            </script>
+    </body>
+
+
+</html>

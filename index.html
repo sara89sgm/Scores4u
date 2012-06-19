@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Scores4u</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+    
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+         <h1><a href="index.html">Scores<span class="logo_colour">4u</span></a></h1>
+          <h2>Find your score or...create it!</h2>
+        </div>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="selected"><a href="index.html">Home</a></li>
+          
+            <li><a href="spotify.html">Search</a></li>
+          <li><a href="editor.html">Editor</a></li>
+          
+          <li><a href="#">Info</a>
+          <ul>
+          <li><a href="manual.html">UserManual </a></li>
+          <li><a href="technical.html">Technical Details</a></li></ul></li>
+          <li><a href="contact.html">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="site_content">
+      <ul id="images">
+        <li><img src="images/quim.jpg" width="300" height="300" alt="photo_one" /><img src="images/sara.jpg" width="300" height="300" alt="photo_one" /></li>
+        <li><img src="images/musescore.png" width="600" height="300" alt="photo_two" /></li>
+        <li><img src="images/spotify.jpg" width="600" height="300" alt="photo_three" /></li>
+        <li><img src="images/deezer.jpg" width="600" height="300" alt="photo_four" /></li>
+        <li><img src="images/musixmatch.jpeg" width="600" height="300" alt="photo_five" /></li>
+          <li><img src="images/echonest.jpg" width="600" height="300" alt="photo_five" /></li>
+   
+      </ul>
+      
+      <div class="content">
+        <h1>Welcome to Scores4u</h1>
+        <p>With Scores4u you can search your favourite song and we will give you the streaming, lyrics and the score!  </p>
+          <p> Scores4u is an application developed in Barcelona Music Hack Day (Sonar) on 14th and 15th June 2012 by Quim Llimona (@lemonzi) and  Sara Gozalo (@sara_sgm) </p>
+          
+          <p> Try our hack! but...really carefully! :) Enjoy! </p>
+          
+          <p> Thanks to #musescore, #spotify, #deezer, #musixmatch and #echonest engineers that have helped us during the hack! thanks a lot!!! :) </p>
+      </div>
+    </div>
+    <footer>
+       <p>Scores4u! BCN #musichackday | design from <a href="css3templates.co.uk">css3templates.co.uk </a></p>
+    </footer>
+  </div>
+  <p>&nbsp;</p>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#images').kwicks({
+        max : 600,
+        spacing : 2
+      });
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Scores4u</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+    
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+         <h1><a href="index.html">Scores<span class="logo_colour">4u</span></a></h1>
+          <h2>Find your score or...create it!</h2>
+        </div>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="selected"><a href="index.html">Home</a></li>
+          
+            <li><a href="spotify.html">Search</a></li>
+          <li><a href="editor.html">Editor</a></li>
+          
+          <li ><a href="#">Info</a>
+          <ul>
+          <li ><a href="manual.html">UserManual </a></li>
+          <li><a href="technical.html">Technical Details</a></li></ul></li>
+          <li><a href="contact.html">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="site_content">
+      
+      
+      <div class="content">
+        <h1>User Manual</h1>
+           <p>With Scores4u you can search your favourite song and we will give you the streaming, lyrics and the score!  </p>
+          <p> Scores4u is an application developed in Barcelona Music Hack Day (Sonar) on 14th and 15th June 2012 by Quim Llimona (@lemonzi) and  Sara Gozalo (@sara_sgm) </p>
+          <h2> Search Engine + Visualizer </h2>
+          <p>With our Meta-Search Engine, you can look up a song in different platforms at the same time and choose the player that you prefer :). Only one lyrics and score engine are supported by now, sorry!
+          </p><p>
+          It's really simple and straight-forward to use: just query an input text (song title, artist, tag...) and the Streamer Boxes will be full of cool options to listen to. Whether you pick the song form one engine or the other, the main Player window will appear, with a minimal playback control widget, a panel with the retrieved lyrics and the Score of the track.
+          </p><p>
+          If no score has been found, you'll be prompted to create your own! Please don't use the link that appears there (we know, it's kind of cruel to whou you this nice button...), just click on the tab on the top.</p>
+          <p> 
+           </p>
+          
+          <h2> Score Editor </h2>
+          <p>The Score Editor is still in pre-aplha phase, due to some issues with multiline rendering that haven't been solved yet... But feel free to try it out! </p><p>
+          Use the arrow keys to navigate through the score. To add new notes, go to the end and hit Enter. Pitch can only be changed one semitone at a time by now. To change the duration of a single note, hit a number while it's selected. It's the same encoding Finale does: 7 for a whole note, 6 for a half note, 5 for a quarter, and so on.
+          </p><p>
+          It's not possible to save the scores right now, but maybe in  future we'll implement a MusicXML exporter that can post them directly to MuseScore so you can view them when you play the same song again!</p>
+         
+<h2>Have fun!</h2>
+<p>We built this web-app to have fun, and because we can (which is one of the most praiseworthy reasons an engineer can have to build stuff). We hope you have a lot fun too! See you hackers at the next MHD, and remember you can follow us on Twitter.</p>
+      </div>
+    </div>
+    <footer>
+       <p>Scores4u! BCN #musichackday | design from <a href="css3templates.co.uk">css3templates.co.uk </a></p>
+    </footer>
+  </div>
+  <p>&nbsp;</p>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#images').kwicks({
+        max : 600,
+        spacing : 2
+      });
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
+</html>

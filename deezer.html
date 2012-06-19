@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>CSS3_photo_dark</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+         <h1><a href="index.html">Scores<span class="logo_colour">4u</span></a></h1>
+          <h2>Find your score or...create it!</h2>
+        </div>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="examples.html">Deezer Extension</a></li>
+          <li><a href="page.html">Info</a></li>
+          <li><a href="another_page.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="site_content">
+      
+      
+      <div class="content">
+          <div id="dz-root"></div>
+       <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/en/plugins/player?autoplay=false&playlist=true&width=900&height=260&cover=true&type=album&id=491226&title=" width="900" height="260"></iframe>
+           <div id="musescore"></id>
+          
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; CSS3_photo_dark | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
+    </footer>
+  </div>
+  <p>&nbsp;</p>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
+       <script type="text/javascript" src="js/jquery.oembed.js"></script>
+    
+    <script src="http://cdn-files.deezer.com/js/min/dz.js"></script>
+    
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#images').kwicks({
+        max : 600,
+        spacing : 2
+      });
+      $('ul.sf-menu').sooperfish();
+                      
+    DZ.init({
+                              appId  : '103141',
+                              channelUrl : 'http://scores4u/channel.html',
+                              player: true
+                              
+                              });
+                      DZ.login(function(response) {
+                               if (response.authResponse) {
+                               console.log('Welcome!  Fetching your information.... ');
+                               DZ.api('/user/me', function(response) {
+                                      console.log('Good to see you, ' + response.name + '.');
+                                      });
+                               } else {
+                               console.log('User cancelled login or did not fully authorize.');
+                               }
+                               }, {perms: 'email'});
+        
+                      DZ.Event.suscribe('current_track', function(track, evt_name){
+                                  console.log('ggggg.');      
+                                        });
+                      $("#musescore").oembed("http://musescore.com/user/13398/scores/51846" /*,{maxWidth: 1024}*/);
+    });
+  </script>
+  
+</body>
+</html>
